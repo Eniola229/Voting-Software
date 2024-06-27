@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('candidates', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string("avatar");
             $table->string('matricnumber');
             $table->string('position');
             $table->string('level');

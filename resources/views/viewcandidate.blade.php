@@ -35,7 +35,13 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 </head>
-
+    <style>
+    .table-wrapper {
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+</style>
 <body class="dashboard dashboard_1">
     <div class="full_container">
         <div class="inner_container">
@@ -111,7 +117,7 @@
                         <div class="row column_title">
                             <div class="col-md-12">
                                 <div class="page_title">
-                                    <h2>Welcome</h2>
+                                    <h2>Candidates</h2>
                                 </div>
                             </div>
                         </div>
@@ -126,96 +132,35 @@
 
                         <div class="row column3">
                         </div>
-                        <div class="row column4 graph">
-                            <div class="col-md-6 margin_bottom_30">
-                                <div class="dash_blog">
-                                    <div class="dash_blog_inner">
-                                        <div class="dash_head">
-                                            <h3><span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M16 14a5 5 0 0 1 5 5v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a5 5 0 0 1 5-5zm4-6a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1V9a1 1 0 0 1 1-1m-8-6a5 5 0 1 1 0 10a5 5 0 0 1 0-10"/></g></svg>
-                                                    |Add Candidates</span><span class="plus_green_bt"></span></h3>
-                                        </div>
-                                        <div class="list_cont">
-                                            <p>Add Candidate</p>
-                                        </div>
-                                        <div class="task_list_main">
-                                            <form method="POST" action="{{ route('candidate.store') }}" enctype="multipart/form-data">
-                                                @csrf
-                                                <div class="mb-3 col-12">
-                                                  <label for="exampleFormControlInput1" class="form-label">Candidate Profile Pictture*</label>
-                                                  <input type="file" name="avatar" class="form-control" id="exampleFormControlInput1" placeholder="Oladepo Chidi Musa">
-                                                   <x-input-error :messages="$errors->get('avatar')" class="mt-2" />
-                                                </div>
-                                                <div class="mb-3 col-12">
-                                                  <label for="exampleFormControlInput1" class="form-label">Candidate Full Name*</label>
-                                                  <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Oladepo Chidi Musa">
-                                                   <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                                                </div>
-                                                <div class="mb-3 col-12">
-                                                  <label for="exampleFormControlInput1" class="form-label">Candidate Matric No*</label>
-                                                  <input type="text" name="matricnumber" class="form-control" id="exampleFormControlInput1" placeholder="RCT/2023/000/000">
-                                                   <x-input-error :messages="$errors->get('matricnumber')" class="mt-2" />
-                                                </div>
-                                                <div class="mb-3 col-12">
-                                                  <label for="exampleFormControlInput1" class="form-label">Candidate Aspiring Position*</label>
-                                                  <input type="text" name="position" class="form-control" id="exampleFormControlInput1" placeholder="Position">
-                                                   <x-input-error :messages="$errors->get('position')" class="mt-2" />
-                                                </div>
-                                                <div class="mb-3 col-12">
-                                                  <label for="exampleFormControlInput1" class="form-label">Candidate Level*</label>
-                                                  <input type="text" name="level" class="form-control" id="exampleFormControlInput1" placeholder="ND or HND">
-                                                   <x-input-error :messages="$errors->get('level')" class="mt-2" />
-                                                </div>
-                                                 <div class="mb-3 col-12">
-                                                   <button class="btn btn-primary">Add  Candidate</button>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="dash_blog">
-                                    <div class="dash_blog_inner">
-                                        <div class="dash_head">
-                                            <h3><span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="currentColor" d="M9.5 1.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1V7l1.8-1.5h2.2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zM5 4a2 2 0 1 0 0 4a2 2 0 0 0 0-4m2.5 5h-5A1.5 1.5 0 0 0 1 10.5c0 1.116.459 2.01 1.212 2.615C2.953 13.71 3.947 14 5 14s2.047-.29 2.788-.885C8.54 12.51 9 11.616 9 10.5A1.5 1.5 0 0 0 7.5 9"/></svg>
-                                                    FeedBacks</span><span class="plus_green_bt"><a
-                                                        href="#"></a></span></h3>
-                                        </div>
-                                        <div class="list_cont">
-                                            <p>Alll Feedbacks</p>
-                                        </div>
-                                        <div class="msg_list_main">
+                        <div class="table-responsive table-wrapper">
                                             <table class="table">
                                               <thead>
                                                 <tr>
                                                   <th scope="col">#</th>
                                                   <th scope="col">Name</th>
-                                                  <th scope="col">Choice</th>
-                                                  <th scope="col">Message</th>
+                                                  <th scope="col">Matric No</th>
+                                                  <th scope="col">Position</th>
+                                                  <th scope="col">Level </th>
+                                                  <th scope="col">Actions</th>
                                                 </tr>
                                               </thead>
                                               <tbody>
-                                                @foreach($feedbacks as $feedback) 
+                                                @foreach($cadidates as $cadidate) 
                                                 <tr>
-                                                  <th scope="row">{{ $feedback->id }}</th>
-                                                  <td>{{ $feedback->name }}</td>
-                                                  <td>{{ $feedback->choice }}</td>
-                                                  <td>{{ $feedback->message }}</td>
+                                                  <th scope="row">{{ $cadidate->id }}</th>
+                                                  <td>{{ $cadidate->name }}</td>
+                                                  <td>{{ $cadidate->matricnumber }}</td>
+                                                  <td>{{ $cadidate->position }}</td>
+                                                  <td>{{ $cadidate->level }}</td>
+                                                  <td>
+                                                      <a href="{{ url('editcandidate', $cadidate->id) }}">
+                                                          <button class="btn btn-primary">View</button>
+                                                        </a>
+                                                  </td>
                                                 </tr>
                                                 @endforeach
                                               </tbody>
                                             </table>
-                                        </div>
-                                        <!-- <div class="read_more">
-                                            <div class="center"><a class="main_bt read_bt" href="#">Read
-                                                    More</a></div>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- footer -->

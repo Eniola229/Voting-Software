@@ -22,7 +22,7 @@
   
 
   <div class="d-md-flex half">
-    <div class="bg" style="background-image: url('https://rectem.edu.ng/gallery/05.jpg');"></div>
+    <div class="bg" style="background-image: url('https://rectem.edu.ng/rectem.png');"></div>
     <div class="contents">
 
       <div class="container">
@@ -33,7 +33,8 @@
               <h3>Login <strong></strong></h3>
               <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
               </div>
-              <form action="include/login.inc.php" method="POST">
+              <form action="{{ route('login') }}" method="POST">
+                @csrf
                 <div class="form-group first">
                   <label for="username">Email</label>
                   <input type="email"  name="email" class="form-control" placeholder="your-email@gmail.com" id="email">
@@ -41,7 +42,7 @@
                 </div>
                 <div class="form-group last mb-3">
                   <label for="password">Password</label>
-                  <input type="password" name="pass_word" class="form-control" placeholder="Your Password" id="password">
+                  <input type="password" name="password" class="form-control" placeholder="Your Password" id="password">
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
                 
@@ -53,7 +54,7 @@
                   <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
                 </div>
 
-                <input type="submit" value="Log In" class="btn btn-block btn-primary">
+                <input type="submit" value="Log In" class="btn btn-block btn-primary" style="background: blue; border: 1px solid blue;">
 
               </form>
             </div>

@@ -46,15 +46,17 @@
     </div>
     <div class="row">
         <!-- Candidate 1 -->
+        @foreach($cadidates as $cadidate)
         <div class="col-md-4">
             <div class="card candidate-card">
-                <img src="images/osoba.jpeg" class="card-img-top" alt="Candidate 1">
+                <img src="{{ asset('storage/' . $cadidate->avatar) }}" style="height: 300px" class="card-img-top" alt="Candidate 1">
                 <div class="card-body">
-                    <h5 class="card-title">OSOBA OLUWATOBILOBA NIFEMI</h5>
-                    <p class="card-text">PRESIDENT (RECTEM)</p>
+                    <h5 class="card-title">{{ $cadidate->name }}</h5>
+                    <p class="card-text">{{ $cadidate->position }} (RECTEM)</p>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 

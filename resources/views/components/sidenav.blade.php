@@ -31,6 +31,14 @@
                                         d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6z" />
                                 </svg> <span>Dashboard</span></a>
                         </li>
+                        <li >
+                            <a href="{{ url('viewcandidate')}}"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6z" />
+                                </svg> <span>Candidates</span></a>
+                        </li>
                         <li class="active">
                             <a href="#additional_page" data-toggle="collapse" aria-expanded="false"
                                 class="dropdown-toggle">
