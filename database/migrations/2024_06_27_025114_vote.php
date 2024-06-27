@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('vote', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('matric');
             $table->string('presidential_candidate');
             $table->string('vice_presidential_candidate');
             $table->string('general_secetary');

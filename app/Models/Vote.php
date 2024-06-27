@@ -12,7 +12,7 @@ class Vote extends Model
     protected $table = "vote";
 
     protected $fillable = [
-        'name',
+        'matric',
         'presidential_candidate',
         'vice_presidential_candidate',
         'general_secetary',

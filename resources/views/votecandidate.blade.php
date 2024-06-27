@@ -49,7 +49,8 @@
         <div class="row">
     <div class="col-md-6">
         <h3>MATRIC NUMBER PLEASE</h3>
-        <input type="text" placeholder="Matric Number" name="name" class="form-control" required>
+        <input type="text" placeholder="Matric Number" name="matric" class="form-control" required>
+         <x-input-error style="color: red;" :messages="$errors->get('matric')" class="mt-2" />
 </div>
 </div>
 

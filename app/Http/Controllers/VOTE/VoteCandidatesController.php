@@ -12,7 +12,7 @@ class VoteCandidatesController extends Controller
 {
         public function store(Request $request): RedirectResponse {
         $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255', 'unique:Vote,name'],
+            'matric' => ['required', 'string', 'max:255', 'unique:Vote,matric'],
             'presidential_candidate' => ['required', 'string', 'max:255'],
             'vice_presidential_candidate' => ['required', 'string', 'max:255'],
             'general_secetary' => ['required', 'string', 'max:255'],

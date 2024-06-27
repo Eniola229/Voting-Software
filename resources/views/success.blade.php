@@ -50,8 +50,7 @@
                                  Thank you 
                                 </span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="votecan.php">BACK TO VOTING POLL</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="candidates.php">CANDIDATES</a>
+                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{{ url('votecandidate')}}">BACK TO VOTING POLL</a>
                                 </div>
                             </div>
                         </div>
